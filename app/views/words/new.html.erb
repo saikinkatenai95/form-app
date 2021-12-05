@@ -1,0 +1,5 @@
+<%= form_with model: @word, method: :post, local: true do |f| %>
+<%= f.text_field :firstword %>
+<%= f.text_field :secondword %>
+<%= f.submit%>
+<% end %>
