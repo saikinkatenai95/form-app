@@ -1,7 +1,7 @@
 class WordsController < ApplicationController
 
   def index
-    @words = Word.all
+    @words = Word.order(updated_at: :desc).limit(1)
   end
 
   def new
