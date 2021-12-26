@@ -16,6 +16,10 @@ class WordsController < ApplicationController
     end
   end
 
+  def rankup
+    
+  end 
+
 
   private
   def word_params
