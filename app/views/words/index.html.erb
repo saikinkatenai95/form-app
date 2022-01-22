@@ -2,7 +2,7 @@
 <%= link_to "NEwページ", new_word_path%>
 <% @words.each do |word| %>
 <ul class="lists">
-  <div class='lists'>
+  <div class='list'>
     <%= "検索するものは#{word.firstword} #{word.secondword}どす" %>
     <%= word.firstword %><%= word.secondword %>
   </div>
