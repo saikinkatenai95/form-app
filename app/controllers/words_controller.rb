@@ -9,7 +9,7 @@ class WordsController < ApplicationController
   end
 
   def create
-    @word = Word.new(word_params)
+    @word = Word.new
     # binding.pry
     if @word.save
     redirect_to action: :index
