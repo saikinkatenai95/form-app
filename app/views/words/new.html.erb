@@ -1,5 +1,5 @@
 <%= form_with url: words_path, method: :get, local: true do |f| %>
-<%= f.text_field :firstword ,value:"#{session[:firstword]}"%>
+<%= f.text_field :firstword %>
 <%= f.text_field :secondword %>
 <%= f.submit%>
 <% end %>
