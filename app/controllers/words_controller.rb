@@ -16,9 +16,13 @@ class WordsController < ApplicationController
     end
   end
 
+  def show
+    @word = Word.find[params[:firstword]]
+  end
+
   def rankup
     
-  end 
+  end
 
 
   private
