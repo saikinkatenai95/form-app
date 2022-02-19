@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_05_051441) do
+ActiveRecord::Schema.define(version: 2022_02_19_052000) do
+
+  create_table "keywords", charset: "utf8", force: :cascade do |t|
+    t.string "word", null: false
+    t.string "additionword", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "words", charset: "utf8", force: :cascade do |t|
     t.string "firstword", default: "", null: false
