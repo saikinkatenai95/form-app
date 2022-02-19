@@ -1,19 +1,18 @@
 class KeywordsController < ApplicationController
   def index
-    
+    @keywords = Keyword.order(updated_at: :desc).limit(1)
   end
 
   def new
-    
+    @keyword = Keyword.new
   end
 
   def create
-    @word = Word.find(params[:word_id])
-    @keyword = @word.keywords.new
+    @keyword = Keyword.new
     if @keyword.save
-      redirect_to word_keywords_path(@word)
+      redirect_to action: :index
     end
   end
-      
+
 
 end
