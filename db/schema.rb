@@ -13,10 +13,11 @@
 ActiveRecord::Schema.define(version: 2022_02_19_052000) do
 
   create_table "keywords", charset: "utf8", force: :cascade do |t|
-    t.string "word", null: false
+    t.bigint "word_id", null: false
     t.string "additionword", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["word_id"], name: "index_keywords_on_word_id"
   end
 
   create_table "words", charset: "utf8", force: :cascade do |t|
@@ -26,4 +27,5 @@ ActiveRecord::Schema.define(version: 2022_02_19_052000) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "keywords", "words"
 end
