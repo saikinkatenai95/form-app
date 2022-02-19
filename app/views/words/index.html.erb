@@ -6,14 +6,15 @@
 <ul class="lists">
   <div class='list'>
     <%= "検索するものは#{word.firstword} #{word.secondword}どす" %>
+    <% @test = word.firstword%>
   </div>
 </ul>
 <% end %>
 
 <%= "#{params[:firstword]}と#{params[:secondword]}ですよ"%>
 
-<%= form_with url: words_path, method: :get do |f| %>
-<%= f.text_field :firstword %>
+<%= form_with model: @word, local: true do |f| %>
+<%= f.hidden_field :firstword, :value => @test %>
 <%= f.text_field :secondword %>
 <%= f.submit %>
 <% end %>

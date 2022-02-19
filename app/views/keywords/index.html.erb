@@ -1,0 +1,8 @@
+<h1>入力画面</h1>
+  <% @keywords.each do |word| %>
+<ul class="lists">
+  <div class='list'>
+    <%= "検索するものは#{word.word} #{word.additionword}どす" %>
+  </div>
+</ul>
+<% end %>
